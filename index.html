@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tetris</title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class='game-container' id='lol'>
+		<h1 id='background-title'>TETRIS</h1>
+		<div id='score'> 0 </div>
+		<canvas id='tetris' width='240' height='400'></canvas>
+	</div>
+
+
+	<!-- Game Start Modal -->
+		<div id="start-modal" class="modal-begin">
+		  <div class="start-modal-content">
+		    <div class="start-modal-text-container">
+		      <h2>How to play</h2>
+		      <p id="game-instruction">Use the <em>"A"</em> key to move left <em>"D"</em> key to move right and use <em>"Q"</em> and <em>"E"</em> keys to rotate <br> pieces,hold <em>"S"</em> key for quick drop. <br>Try to  complete rows of blocks at the bottom (with no gaps). <br>Each complete row will disappear, giving you more room to as you continue playing. <br>Your game is over if the falling blocks pile up to the top of the playing area. </p>
+		      <button onclick=start()>Start Game</button>
+		    </div>
+		  </div>
+		</div>
+
+	<!-- Lose Modal -->
+		<div id="lose-modal" class="modal-end">
+		  <div class="end-modal-content">
+		    <div class="end-modal-text-container">
+		      <p>Your Score</p>
+		      <div id='end-modal-score'> 0 </div>
+		      <button onclick=restart()>Restart Game</button>
+		    </div>
+		  </div>
+		</div>
+
+
+	<script src='tetris.js'></script>
+</body>
+</html>
